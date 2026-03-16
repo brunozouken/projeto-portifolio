@@ -270,7 +270,7 @@ section {
    SCROLLBAR PERSONALIZADA
 =========================== */
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -286,7 +286,7 @@ section {
 =========================== */
 .heading {
   text-align: center;
-  font-size: 12rem;
+  font-size: clamp(4rem, 8vw, 10rem);
   margin: 5rem 0;
 }
 
@@ -305,18 +305,38 @@ section {
   gap: 2.5rem;
 }
 
-/* Card de serviço */
+/* ===========================
+   SERVICES
+=========================== */
+
+.services {
+  background-color: var(--bg-color);
+}
+
+.services h2 {
+  color: var(--text-color);
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: stretch;
+  gap: 2.5rem;
+}
+
+/* Card */
 .service-box {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--main-color);
-  height: 500px;
+  min-height: 320px;
+  height: auto;
   border-radius: 3rem;
   cursor: pointer;
   border: 5px solid transparent;
   transition: 0.4s ease-in-out;
-  color: #000
+  color: #000;
 }
 
 .service-box:hover {
@@ -326,61 +346,62 @@ section {
   transform: scale(1.03);
 }
 
-/* Conteúdo dentro do card */
+/* Card Service */
 .service-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 5rem;
+  padding: 4rem;
 }
 
 .service-info i {
-  font-size: 8rem;
+  font-size: 6rem;
 }
 
 .service-info h4 {
-  font-size: 4rem;
-  margin: 2rem 0;
-  font-weight: 800;
+  font-size: 3rem;
+  margin: 3rem 0;
+  font-weight: 700;
 }
 
 .service-info p {
-  font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 1.7;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  max-width: 90%;
+  overflow-wrap: break-word;
 }
 
 /* ===========================
    SEÇÃO PROJECTS
 =========================== */
+/* ===========================
+   PROJECTS
+=========================== */
+
 .projects {
   background-color: var(--second-bg-color);
 }
 
-/* Grid dos projetos */
 .projects-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   place-items: center;
-  gap: 5rem;
+  gap: 4rem;
   padding: 2rem;
 }
 
-/* Card de projeto */
 .project-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   background-color: var(--bg-color);
   border: 3px solid var(--main-color);
   border-radius: 3rem;
   gap: 2rem;
-  padding: 5rem 2rem;
-  overflow: hidden;
+  padding: 4rem 2rem;
   cursor: pointer;
   box-shadow: 0 0 5px var(--main-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -392,32 +413,67 @@ section {
   transform: scale(1.02);
 }
 
-/* Imagem do projeto */
 .project-card img {
   width: 100%;
-  max-width: 500px;
-  height: auto;
+  max-width: 450px;
   border-radius: 2rem;
-  object-fit: cover;
 }
 
-/* Título e descrição */
 .project-card h3 {
-  font-size: 3rem;
-  color: var(--text-color);
+  font-size: 2.6rem;
 }
 
 .project-card p {
-  font-size: 1.6rem;
-  color: var(--text-color);
-  line-height: 1.5;
+  font-size: 1.5rem;
+  line-height: 1.6;
   max-width: 90%;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255,255,255,0.85);
+  overflow-wrap: break-word;
 }
 
 /* ===========================
    RESPONSIVIDADE
 =========================== */
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px){
+
+  .heading{
+    font-size: 6rem;
+  }
+
+  .service-info{
+    padding: 3rem;
+  }
+
+  .service-info h4{
+    font-size: 2.4rem;
+  }
+
+  .service-info p{
+    font-size: 1.4rem;
+  }
+
+  .projects-box{
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .project-card{
+    padding: 3rem 1.5rem;
+  }
+
+  .project-card h3{
+    font-size: 2.2rem;
+  }
+
+  .project-card p{
+    font-size: 1.4rem;
+  }
+
+}
 @media (max-width: 768px) {
   .project-card {
     padding: 3rem 1.5rem;
