@@ -16,7 +16,7 @@
   --bg-color: #080808;
   --second-bg-color: #101010;
   --text-color: white;
-  --main-color: #deAAff;
+  --main-color: #0066ff;
 }
 
 /* ===========================
@@ -40,7 +40,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 4rem 15%;
+  padding: 2rem 15%;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   display: flex;
@@ -71,7 +71,7 @@ body {
 
 /* Destaque colorido no texto (gradient) */
 span {
-  background: linear-gradient(270deg, #c77dff 30%, #5a9dfc 100%);
+  background: linear-gradient(270deg, #7da0ff 30%, #0d5ccc 100%);
   background-clip: text;
   color: transparent;
 }
@@ -96,7 +96,7 @@ span {
   font-size: 1.8rem;
   padding: 1rem 2rem;
   border-radius: 3rem;
-  background: linear-gradient(270deg, #deAAff 10%, #c8e7ff 100%);
+  background: linear-gradient(270deg,  #7da0ff 10%, #0d5ccc 100%);
   color: white;
   border: none;
   letter-spacing: 1px;
@@ -112,8 +112,8 @@ span {
    SEÇÕES GERAIS
 =========================== */
 section {
-  min-height: 100vh;
-  padding: 10rem 15%;
+  min-height: 80vh;
+  padding: 7rem 15%;
 }
 
 /* ===========================
@@ -259,6 +259,7 @@ section {
 
 .about-content p {
   font-size: 1.8rem;
+  margin: 10px 0;
 }
 
 .about-content .btn {
@@ -285,7 +286,7 @@ section {
 =========================== */
 .heading {
   text-align: center;
-  font-size: 7rem;
+  font-size: 12rem;
   margin: 5rem 0;
 }
 
